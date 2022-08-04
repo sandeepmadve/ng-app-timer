@@ -35,7 +35,7 @@ export class PomodoroComponent implements OnInit, OnDestroy {
 
   private getTimeDifference() {
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
-    console.log("time diff: " + this.timeDifference);
+    // console.log("time diff: " + this.timeDifference);
 
     if (this.timeDifference <= 0) {
       if (this.timeLabel == 'F') {

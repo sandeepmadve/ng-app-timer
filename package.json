@@ -7,6 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "build:gh-pages": "ng build --prod --base-href https://sandeepmadve.github.io/ng-timer-app/" ,
+    "deploy:gh-pages": "ngh --dir=dist/ng-timer-app",
     "temp": "ng add @ng-bootstrap/ng-bootstrap --legacy-peer-deps"
   },
   "private": true,
