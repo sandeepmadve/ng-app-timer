@@ -1,0 +1,120 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --blackish: #202020;
+  --dark-grey: #3f3f3f;
+  --medium-grey: #707070;
+  --egg-yellow: #ffdf6c;
+
+  --primary-text: #ffffff;
+  --secondary-text: #aaaaaa;
+  --background: #181818;
+  --menu: #212121;
+  --hover: #3d3d3d;
+
+  --bs-danger: #dc3546;
+  --bs-warning: #ffbd07;
+  --bs-success: #28a746;
+  --bs-info: #17a3b8;
+  --bs-primary: #007bff;
+
+  --color-secondary: #1a4a4c;
+  --color-tertiary: #87bcca;
+}
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url(./assets/fonts/Roboto/Roboto-Light.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: local("Roboto"), url(./assets/fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto"), url(./assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("Roboto"), url(./assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
+
+body {
+  background-color: #f6f6f6;
+  background-image: linear-gradient(315deg, #f6f6f6 0%, #e9e9e9 74%);
+  /* min-height: 700px; */
+  font-family: "Roboto" !important;
+}
+
+body > b {
+  font-family: "Roboto-Bold" !important;
+}
+
+.navbar-light .navbar-brand {
+  color: white !important;
+}
+
+.navbar {
+  background: var(--color-tertiary);
+  padding: 0px;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: var(--blackish) !important;
+  background-color: var(--one-blue) !important;
+  border-color: var(--one-blue) !important;
+}
+
+.btn-close-modal {
+  float: right;
+  padding: 20px;
+}
+
+.form-check-input:checked {
+  background-color: var(--one-blue);
+  border-color: var(--one-blue);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 1px var(--one-blue);
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+.xq-border-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header.title {
+  margin-left: -12px;
+  margin-right: -12px;
+  position: relative;
+}
+
+.app-color-bg {
+  background: linear-gradient(
+    to right,
+    var(--bs-danger),
+    var(--bs-warning),
+    var(--bs-success),
+    var(--bs-info),
+    var(--bs-primary)
+  );
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "../node_modules/bootstrap/scss/bootstrap";
+.bg-tertiary {
+  background: var(--color-tertiary);
+}

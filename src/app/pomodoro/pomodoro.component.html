@@ -1,0 +1,42 @@
+<div class="timer container shadow">
+
+    <p class="display-4 mb-2"> Pomodoro Timer </p>
+    <hr>
+    <div class="row mb-3">
+        <div class="col-3">
+            <div class="card bg-white text-white">
+                <div class="card-body">
+                    <button class="btn btn-light p-4 w-100" *ngIf="timeLabel=='R'" (click)="startWithPomodoroTechnique()"> Start </button>
+                    <button class="btn btn-outline-danger p-4 w-100" *ngIf="timeLabel=='F'" (click)="stopWithPomodoroTechnique()"> Stop </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <p class="lead text-start" style="letter-spacing: .001em;">
+                The Pomodoro Technique is a time management system that encourages people to work with the time they
+                have—rather than against it. Using this method, you break your workday into 25-minute chunks separated
+                by five-minute breaks. After about four pomodoros, you take a longer break of about 15 to 20 minutes.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-3">
+            <div class="card bg-white">
+                <div class="card-header">
+                    Mode
+                </div>
+                <div class="card-body">
+                    <p id="label" class="display-4 text-muted" *ngIf="timeLabel=='R'"> Relax</p>
+                    <p id="label" class="display-4 text-danger" *ngIf="timeLabel=='F'"> Focus</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <!-- <span id="days" [ngClass]="timeLabel=='F' ? 'text-danger' : 'text-muted'"> {{daysToDday}} </span>Day(s)-->
+            <span id="hours" [ngClass]="timeLabel=='F' ? 'text-danger' : 'text-muted'"> {{hoursToDday ? hoursToDday : 0}} </span>Hrs 
+            <span id="minutes" [ngClass]="timeLabel=='F' ? 'text-danger' : 'text-muted'"> {{minutesToDday ? minutesToDday : 0}} </span>Min
+            <span id="seconds" [ngClass]="timeLabel=='F' ? 'text-danger' : 'text-muted'"> {{secondsToDday ? secondsToDday : 0}} </span>Sec
+        </div>
+    </div>
+</div>
